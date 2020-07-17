@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CrudRetrofit</string>
+    <string name="id">ID</string>
+    <string name="name">Nama</string>
+    <string name="description">Deskripsi</string>
+    <string name="chose_image">Pilih Gambar</string>
+    <string name="submit">Simpan</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Tanggal</string>
+</resources>
