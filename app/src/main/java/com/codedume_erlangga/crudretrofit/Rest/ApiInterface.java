@@ -27,7 +27,7 @@ public interface ApiInterface {
                                          @Part("flag") RequestBody flag);
     @Multipart
     @POST("heros")
-    Call<PostPutDelHeros> postImageHeros(@Part MultipartBody.Part image,
+    Call<PostPutDelHeros> postUpdateHeros(@Part MultipartBody.Part image,
                                          @Part("id") RequestBody id,
                                          @Part("name") RequestBody name,
                                          @Part("description") RequestBody description,

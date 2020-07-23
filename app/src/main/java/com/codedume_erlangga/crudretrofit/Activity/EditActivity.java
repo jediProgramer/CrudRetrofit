@@ -157,7 +157,7 @@ public class EditActivity extends AppCompatActivity {
             RequestBody reqBody = RequestBody.create(MediaType.parse("multipart/form-file"), imagefile);
             MultipartBody.Part partImage = MultipartBody.Part.createFormData("image", imagefile.getName(), reqBody);
 
-            Call<PostPutDelHeros> putHerosCall = mApiInterface.postImageHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), ID), RequestBody.create(MediaType.parse("text/plain"), edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), UPDATE_FLAG));
+            Call<PostPutDelHeros> putHerosCall = mApiInterface.postUpdateHeros(partImage, RequestBody.create(MediaType.parse("text/plain"), ID), RequestBody.create(MediaType.parse("text/plain"), edtName.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), edtDescription.getText().toString()), RequestBody.create(MediaType.parse("text/plain"), date), RequestBody.create(MediaType.parse("text/plain"), UPDATE_FLAG));
             putHerosCall.enqueue(new Callback<PostPutDelHeros>() {
                 @Override
                 public void onResponse(Call<PostPutDelHeros> call, Response<PostPutDelHeros> response) {
@@ -217,7 +217,7 @@ public class EditActivity extends AppCompatActivity {
             dialogMessage = "Apakah anda ingin membatalkan perubahan pada form?";
         } else {
             dialogMessage = "Apakah anda yakin ingin menghapus item ini?";
-            dialogTitle = "Hapus Note";
+            dialogTitle = "Hapus Heros";
         }
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
